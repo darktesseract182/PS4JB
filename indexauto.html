@@ -1,0 +1,214 @@
+<html manifest="offlineCache672.manifest">
+<head>
+<title>PS4 Jailbreak 6.72</title>
+<meta charset="utf-8"/>
+<style>
+.button {
+  background-color: #003263;
+  border-radius: 5px;
+  color: white;
+  padding: .5em;
+  text-decoration: none;
+  height:100%;
+  display:inline-table;
+  font-family: system-ui;
+}
+
+.button:focus,
+.button:hover {
+  background-color: #007bff;
+  color: White;
+}
+
+.titlehead {
+  background-color: #003263;
+  border-radius: 5px;
+  color: white;
+  padding: .5em;
+  text-decoration: none;
+  text-align: center;
+  margin-top: -10px;
+  margin-bottom: -10px;
+  font-family: system-ui;
+}
+
+.titlehead:focus,
+.titlehead:hover {
+  background-color: #007bff;
+  color: White;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("ps4.jpg");
+
+
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.loader,
+.loader:after {
+    border-radius: 50%;
+    width: 10em;
+    height: 10em;
+}
+.loader {
+    margin: 60px auto;
+    font-size: 10px;
+    position: relative;
+    text-indent: -9999em;
+    border-top: 1.1em solid rgba(255, 255, 255, 0.2);
+    border-right: 1.1em solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1.1em solid rgba(255, 255, 255, 0.2);
+    border-left: 1.1em solid #ffffff;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-animation: load8 1.1s infinite linear;
+    animation: load8 1.1s infinite linear;
+}
+@-webkit-keyframes load8 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes load8 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+.loaded,
+.loaded:after {
+    border-radius: 50%;
+    width: 10em;
+    height: 10em;
+}
+.loaded {
+    margin: 60px auto;
+    font-size: 10px;
+    position: relative;
+    text-indent: -9999em;
+    border: 1.1em solid #32cd32;
+}
+.loading-text {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-family: system-ui;
+    margin-top: 65px;
+    font-size: 30px;
+}
+.success-text {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-family: system-ui;
+    margin-top: 65px;
+    font-size: 30px;
+}
+.success-text svg {
+    display: inline;
+    height: 35px;
+}
+.unlocking {
+    width: 50px;
+    color: white;
+    margin-top: -146px;
+}
+.success-check-icon {
+    width: 50px;
+    color: white;
+    margin-top: -141px;
+}
+#success-block {
+    display: none;
+}
+</style></head>
+<body class="bg">
+<script>
+  window.onload = function(e){if(localStorage.Fail==null){localStorage.Fail=0;localStorage.Success=0;}
+  document.getElementById("success").innerHTML="Exitos: "+localStorage.Success;
+  document.getElementById("fail").innerHTML="Fallos: "+localStorage.Fail;}
+  window.applicationCache.ondownloading=function(){document.getElementById("progress").innerHTML="Empezando a Cachear pagina!!"};
+  window.applicationCache.onprogress=function(a){document.getElementById("progress").innerHTML="Estado del cacheo: "+(Math.round(100*(a.loaded/a.total)))+"% Completado"};
+  window.applicationCache.oncached=function(){document.getElementById("progress").innerHTML="Pagina cacheada exitosamente!!";setTimeout(function(){document.getElementById("progress").innerHTML="Desactiva el internet y vuelve a abrir la pagina para correr el Exploit!!"; }, 1500);};
+</script>
+<script src="common/functions.js"></script>
+<script>function print(){}</script>
+<script src="common/exploit.js"></script>
+<script src="jb/jb.js"></script>
+<script src="jb/oldjb.js"></script>
+<script src="payloads/app2usb.js"></script>
+<script src="payloads/backup.js"></script>
+<script src="payloads/preloader.js"></script>
+<script src="payloads/loader.js"></script>
+<script src="payloads/disableupdates.js"></script>
+<script src="payloads/dumper.js"></script>
+<script src="payloads/enableupdates.js"></script>
+<script src="payloads/fanthreshold.js"></script>
+<script src="payloads/ftp.js"></script>
+<script src="payloads/hen.js"></script>
+<script src="payloads/kerneldumper.js"></script>
+<script src="payloads/linuxloader.js"></script>
+<script src="payloads/mirahen.js"></script>
+<script src="payloads/goldhen.js"></script>
+<script src="payloads/miraunofficial.js"></script>
+<script src="payloads/ps4debug.js"></script>
+<script src="payloads/restore.js"></script>
+<script src="payloads/todex.js"></script>
+<script src="payloads/webrte.js"></script>
+<script>setTimeout(function(){document.getElementById("log").innerHTML="fake_vtable: "+fake_vtable.toString()+"  saveall_addr: "+saveall_addr.toString()+"  fake_vt_ptr_bak: "+fake_vt_ptr_bak.toString()+"  pivot_addr: "+pivot_addr.toString()+"  fake_vt_ptr: "+fake_vt_ptr.toString();},500);</script>
+<h1 id="progress" class="titlehead">PS4 Jailbreak 6.72</h1><hr><br>
+<div id="log" style="display:none;"></div>
+<span id="success" style="background-color:limegreen;color:black;" class="titlehead"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span id="fail" style="background-color:firebrick;color:black;" class="titlehead"></span>
+<div>
+<table align="center" style="width:600px;margin-top:30px;">
+<tr>
+<td align="center" id="exploit" colspan="2">
+<div id="unlocking-block">
+<div class="loader">Loading...</div>
+<div class="unlocking">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 486.866 486.866"><path d="M393.904 214.852h-8.891v-72.198c0-76.962-61.075-141.253-137.411-142.625a304.936 304.936 0 00-8.338 0C162.927 1.4 101.853 65.691 101.853 142.653v1.603c0 16.182 13.118 29.3 29.3 29.3 16.182 0 29.299-13.118 29.299-29.3v-1.603c0-45.845 37.257-83.752 82.98-83.752s82.981 37.907 82.981 83.752v72.198H92.963c-13.702 0-24.878 14.139-24.878 31.602v208.701c0 17.44 11.176 31.712 24.878 31.712h300.941c13.703 0 24.878-14.271 24.878-31.712V246.452c.001-17.463-11.175-31.6-24.878-31.6zM271.627 350.591v63.062c0 7.222-6.046 13.332-13.273 13.332h-29.841c-7.228 0-13.273-6.11-13.273-13.332v-63.062c-7.009-6.9-11.09-16.44-11.09-26.993 0-19.999 15.459-37.185 35.115-37.977 2.083-.085 6.255-.085 8.337 0 19.656.792 35.115 17.978 35.115 37.977 0 10.551-4.08 20.092-11.09 26.993z" fill="#fff"/></svg>
+</div>
+<p class="loading-text">Desbloqueando</p>
+</div>
+<div id="success-block">
+<div class="loaded">Loading...</div>
+<div class="success-check-icon">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.285 2L9 13.567 3.714 8.556 0 12.272 9 21 24 5.715z" fill="#fff"/></svg>
+</div>
+<p class="success-text">
+Presiona
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.996 19.995"><linearGradient id="a" gradientUnits="userSpaceOnUse" x1="9.998" y1="0" x2="9.998" y2="17.896"><stop offset="0" stop-color="#5b5b5f"/><stop offset=".023" stop-color="#59595d"/><stop offset=".451" stop-color="#333335"/><stop offset=".791" stop-color="#1c1c1d"/><stop offset="1" stop-color="#141414"/></linearGradient><circle fill="url(#a)" cx="9.998" cy="9.998" r="9.998"/><path fill="#C33" d="M9.998 5.177c2.658 0 4.82 2.163 4.82 4.82s-2.162 4.82-4.82 4.82c-2.658 0-4.819-2.163-4.819-4.82s2.161-4.82 4.819-4.82m0-1.884a6.705 6.705 0 100 13.41 6.705 6.705 0 000-13.41z"/></svg>
+o
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.007 20.006"><linearGradient id="a" gradientUnits="userSpaceOnUse" x1="96.001" y1="355.996" x2="116.007" y2="355.996" gradientTransform="rotate(90 231 135)"><stop offset="0" stop-color="#5b5b5f"/><stop offset="1" stop-color="#141414"/></linearGradient><circle fill="url(#a)" cx="10.003" cy="10.003" r="10.003"/><linearGradient id="b" gradientUnits="userSpaceOnUse" x1="10.003" y1="0" x2="10.003" y2="20.006"><stop offset="0" stop-color="#5b5b5f"/><stop offset=".023" stop-color="#59595d"/><stop offset=".451" stop-color="#333335"/><stop offset=".791" stop-color="#1c1c1d"/><stop offset="1" stop-color="#141414"/></linearGradient><path fill="url(#b)" d="M10.003 1.291c4.804 0 8.713 3.909 8.713 8.713s-3.909 8.712-8.713 8.712c-4.803 0-8.712-3.909-8.712-8.712S5.2 1.291 10.003 1.291m0-1.291C4.479 0 0 4.479 0 10.003s4.479 10.003 10.003 10.003c5.525 0 10.004-4.479 10.004-10.003S15.528 0 10.003 0z"/><path fill="#FFF" d="M12.525 10.763c.42 0 .772-.17 1.018-.491.266-.347.406-.867.406-1.504 0-1.843-.625-2.648-2.573-3.316-.617-.209-2.005-.64-3.048-.851v10.126l2.058.653V6.848c0-.528.296-.855.673-.73.564.156.564.795.564 1.036v3.394c.32.142.623.215.902.215z"/><path fill="#FFF" d="M16.993 12.873c.089-.112.117-.228.082-.343-.043-.141-.227-.413-.965-.647-.918-.348-2.177-.494-3.208-.383a8.57 8.57 0 00-1.724.365l-.045.015v1.096l2.325-.819c.446-.16 1.136-.196 1.509-.074.268.088.326.229.327.332.001.123-.079.298-.47.438l-3.691 1.316v1.045l4.95-1.777c.006-.002.657-.245.91-.564zM7.571 10.93l-3.18 1.13c-.011.004-.803.267-1.26.605-.162.12-.235.268-.208.417.051.278.415.537.972.694a7.493 7.493 0 003.568.289l.107-.018v-.884l-.965.35c-.446.16-1.137.196-1.51.074-.268-.088-.326-.229-.327-.332-.002-.123.079-.298.471-.439l2.332-.835V10.93z"/></svg>
+para continuar
+</p>
+</div>
+</td>
+</tr>
+</table></div>
+<script>
+(function () {
+setTimeout(function () {
+if (window.applicationCache.status == 1) { load_Both(); }
+}, 3000);
+})();
+</script>
+</body>
+</html>

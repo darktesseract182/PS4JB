@@ -4,12 +4,16 @@ function payload_finished(payload)
 	if(payload == "binloader"){
 		setTimeout(function(){document.getElementById("progress").innerHTML="Awaiting Payload!! Send Payload To Port 9021"; }, 7000);
 	} else{
-		setTimeout(function(){document.getElementById("progress").innerHTML="PS4 Jailbreak 6.72 Payload Loaded Succesfully !!"; }, 7000);
+		setTimeout(function(){
+			document.getElementById("progress").innerHTML="Desbloqueo Exitoso!!";
+			document.getElementById("unlocking-block").style.display = "none";
+			document.getElementById("success-block").style.display = "block";
+		}, 7000);
 	}
 	if(payload == "hen" || payload == "mirahen" || payload == "goldhen" || payload == "miraunofficial"){
 		localStorage.Fail--;
 		localStorage.Success++;
-		document.getElementById("success").innerHTML="Success: "+localStorage.Success;
+		document.getElementById("success").innerHTML="Exitos: "+localStorage.Success;
 	}
 }
 
@@ -89,7 +93,7 @@ function load_Both()
 	if (!spoofed){
 		exploit(true);	
 	}else{
-		setTimeout(function(){document.getElementById("progress").innerHTML="PS4 Jailbreak 6.72 HEN Loaded Already ✔"; }, 500);
+		setTimeout(function(){document.getElementById("progress").innerHTML="Ya ha sido desbloqueado ✔"; }, 500);
 	}
 }
 
@@ -107,6 +111,6 @@ function oldexploit(){
 
 function load_payload(payload)
 {	
-	document.getElementById("progress").innerHTML="Loading! Please Wait!!";
+	document.getElementById("progress").innerHTML="Cargando, por favor espera!!";
 	setTimeout(function(){triggerFunction(payload)}, 500);
 }
