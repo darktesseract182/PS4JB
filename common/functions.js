@@ -97,6 +97,15 @@ function load_Both()
 	}
 }
 
+function load_BothNormal()
+{	var spoofed=navigator.userAgent.indexOf("6.72")>=0 ? false : true;
+	if (!spoofed){
+		exploit(true, true);
+	}else{
+		setTimeout(function(){document.getElementById("progress").innerHTML="Ya ha sido desbloqueado ✔"; }, 500);
+	}
+}
+
 function exploit(val){
 	document.getElementById("progress").innerHTML="Running Jailbreak Exploit!!";
 	localStorage.Fail++;
