@@ -106,10 +106,10 @@ function load_BothNormal()
 	}
 }
 
-function exploit(val){
+function exploit(val, normalHen){
 	document.getElementById("progress").innerHTML="Running Jailbreak Exploit!!";
 	localStorage.Fail++;
-	setTimeout(function(){jb(val);}, 500);
+	setTimeout(function(){jb(val, normalHen);}, 500);
 }
 
 function oldexploit(){
