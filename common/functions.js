@@ -97,7 +97,7 @@ function load_Both()
 	}
 }
 
-function load_BothNormal()
+function load_BothNormalHen()
 {	var spoofed=navigator.userAgent.indexOf("6.72")>=0 ? false : true;
 	if (!spoofed){
 		exploit(true, true);
